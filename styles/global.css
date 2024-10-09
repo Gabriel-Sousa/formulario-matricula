@@ -37,18 +37,26 @@
   --heading-3: bold 1.25rem/1.20 var(--ff-poppins);
   --heading-4: bold 1rem/1.20 var(--ff-poppins);  
   --heading-5: bold 0.875/1.20 var(--ff-poppins);  
+  --paragraph: 400 1rem/1.50 var(--ff-poppins);  
 }
 
 body{
   font: var(--heading-4);
   color: var(--text-primary);
   background-color: var(--surface-primary);
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 80rem;
+  margin-inline: auto;
+  
 }
 
 ul li{
   list-style: none;
 }
 
-@media (width >= 76em) {
-  
+@media (width >= 80em) {
+  body{
+    grid-template-columns: 1fr 1fr;
+  }
 }
