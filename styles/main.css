@@ -43,6 +43,12 @@ main header span {
   line-height: 150%; 
 }
 
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
 form fieldset{
   border: 0;
   display: flex;
@@ -64,6 +70,15 @@ form legend{
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+}
+
+.input-wrapper p {
+  color: #78716C;
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
 }
 
 .input-wrapper label{
@@ -196,12 +211,244 @@ form legend{
   stroke: var(--brand-light);
 }
 
+.radio-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.radio-wrapper label:nth-child(1){
+  grid-column: 1/3;
+  color: var(--text-secondary);
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; 
+  margin-bottom: 1rem;
+}
+
+.radio-wrapper .radio-options{
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+.radio-options{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+
+
+.radio-option{
+  position: relative;
+}
+
+.radio-option input[type="radio"]{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+
+}
+
+.radio-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem 1rem;
+  border-radius:  0.5rem;
+  border: 2px solid var(--stroke-default);
+  background: var(--surface-primary);
+  gap: 0.5rem;
+}
+
+.radio-content span{
+  color: rgba(0, 0, 0, 0.80);
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.radio-check{
+  position: absolute;
+  margin: 0.5rem;
+  width: 24px;
+  aspect-ratio: 1;
+  background: url(../assets/icons/circle-unchecked.svg) center / cover;
+}
+
+.turno:has(:checked) .radio-content, 
+.sport:has(:checked) .radio-content{
+  border: 2px solid var(--stroke-highlight);
+  background: var(--surface-primary);
+}
+
+.turno:hover .radio-check,
+.sport:hover .radio-check{
+  background: url(../assets/icons/circle-hover.svg  ) center / cover;
+}
+
+.turno:has(:checked) .radio-check,
+.sport:has(:checked) .radio-check{
+  background: url(../assets/icons/circle-checked.svg) center / cover;
+}
+
+.turno:hover .radio-content,
+.sport:hover .radio-content{
+  border: 2px solid var(--stroke-highlight);
+}
+
+.checkbox-wrapper{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.checkbox-input{
+  position: relative;
+  
+}
+
+.checkbox{
+  background: url(../assets/icons/checkbox-default.svg) center / cover;
+  width: 24px;
+  aspect-ratio: 1;
+}
+
+.checkbox-input input[type="checkbox"]{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.checkboxInput{
+  height: 24px;
+  cursor: pointer;
+}
+
+.checkbox-input:has(:checked) .checkbox{
+  background: url(../assets/icons/checkbox-select.svg) center / cover;
+}
+
+.checkbox-input:not(:has(:checked)):hover .checkbox{
+  background: url(../assets/icons/checkbox-hover.svg) center / cover;
+}
+
+.checkbox-wrapper label{
+  color: var(--text-secondary);
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; 
+}
+
+.checkbox-wrapper .highlight{
+  color: var(--text-highlight);
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.btn-wrapper{
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn-wrapper button:nth-child(1){
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  outline: transparent;
+  border: 2px solid var(--text-highlight);
+  background: var(--surface-primary);
+  
+  color: var(--text-highlight);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; 
+
+  cursor: pointer;
+}
+
+.btn-wrapper button:nth-child(1):hover{
+  outline: 2px solid var(--brand-light);
+}
+
+.btn-wrapper button:nth-child(2){
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background: var(--brand-dark);
+  border: none;
+  
+  color: var(--surface-primary);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; 
+
+  cursor: pointer;
+}
+
+.btn-wrapper button:nth-child(2):hover{
+  background: var(--brand-mid);
+}
 
 
 @media (width >= 80em){
   main {
     padding: 4rem;
     grid-row: 1/2;
-
   }
+
+  main form fieldset:nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  main form fieldset:nth-child(2) legend{
+    grid-column: 1/5;
+  }
+
+  main form fieldset:nth-child(2) .cep{  
+    grid-column: 1/5;
+    grid-row: 1/2;
+  }
+
+  main form fieldset:nth-child(2) .street{  
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+
+  main form fieldset:nth-child(2) .city{  
+    grid-column: 1/4;
+    grid-row: 3/4;
+  }
+
+  .radio-options:has(.sport){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .btn-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+
 }

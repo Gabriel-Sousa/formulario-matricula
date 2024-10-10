@@ -21,6 +21,7 @@
       estimulante.</p>
     <img class="illustration" src="./assets/Illustration.svg" alt="">
   </aside>
+
   <main>
     <header>
       <img src="./assets/icons/arrow-left.svg" alt="arrow-left">
@@ -75,6 +76,161 @@
           </div>
         </div>
 
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço residencial</legend>
+
+        <div class="input-wrapper cep">
+          <label for="cep">CEP</label>
+          <input type="text" id="cep" placeholder="00000-000">
+        </div>
+
+        <div class="input-wrapper street">
+          <label for="street">Rua</label>
+          <input type="text" id="street" placeholder="Rua das Flores">
+        </div>
+
+        <div class="input-wrapper">
+          <label for="number">Número</label>
+          <input type="number" id="number" placeholder="123">
+        </div>
+
+        <div class="input-wrapper city">
+          <label for="city">Cidade</label>
+          <input type="text" id="city" placeholder="Rio de Janeiro">
+        </div>
+
+        <div class="input-wrapper">
+          <label for="state">Estado</label>
+          <input type="text" id="state" placeholder="RJ">
+        </div>
+
+
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Informações do responsável</legend>
+
+        <div class="input-wrapper">
+          <label for="responsavel">Nome do responsável</label>
+          <input type="text" id="responsavel" placeholder="Gabriel de Sousa Lima">
+          <p>Principal responsável legal e contato de emergência</p>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="tel">Telefone </label>
+          <input type="tel" id="tel" placeholder="(10) 9 8765-4321">
+        </div>
+
+        <div class="input-wrapper">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="contato@gabriel-sousa.dev">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Opções de matrícula</legend>
+
+        <div class="radio-wrapper">
+          <label for="turno">Selecione o turno de estudo</label>
+          <div class="radio-options">
+            <div class="radio-option turno">
+              <div class="radio-check"></div>
+              <div class="radio-content">
+                <img src="./assets/checkBoxIcons/sun-cloud.svg" alt="">
+                <span>Manhã</span>
+              </div>
+              <input type="radio" name="turno" id="turno">
+            </div>
+
+            <div class="radio-option turno">
+              <div class="radio-check"></div>
+              <div class="radio-content">
+                <img src="./assets/checkBoxIcons/sun.svg" alt="">
+                <span>Tarde</span>
+              </div>
+              <input type="radio" name="turno">
+            </div>
+          </div>
+        </div>
+
+        <div class="radio-wrapper">
+          <label for="sport">Em qual esporte você gostaria de inscrever seu filho?</label>
+          <div class="radio-options">
+            <div class="radio-option sport">
+              <div class="radio-check"></div>
+              <div class="radio-content">
+                <img src="./assets/checkBoxIcons/football.svg" alt="">
+                <span>Futebol</span>
+              </div>
+              <input type="radio" name="sport" id="sport">
+            </div>
+
+            <div class="radio-option sport">
+              <div class="radio-check"></div>
+              <div class="radio-content">
+                <img src="./assets/checkBoxIcons/basketball.svg" alt="">
+                <span>Basquete</span>
+              </div>
+              <input type="radio" name="sport">
+            </div>
+
+            <div class="radio-option sport">
+              <div class="radio-check"></div>
+              <div class="radio-content">
+                <img src="./assets/checkBoxIcons/swimming.svg" alt="">
+                <span>Natação</span>
+              </div>
+              <input type="radio" name="sport">
+            </div>
+
+            <div class="radio-option sport">
+              <div class="radio-check"></div>
+              <div class="radio-content">
+                <img src="./assets/checkBoxIcons/yoga.svg" alt="">
+                <span>Yoga</span>
+              </div>
+              <input type="radio" name="sport">
+            </div>
+
+            <div class="radio-option sport">
+              <div class="radio-check"></div>
+              <div class="radio-content">
+                <img src="./assets/checkBoxIcons/volleyball.svg" alt="">
+                <span>Volley</span>
+              </div>
+              <input type="radio" name="sport">
+            </div>
+
+            <div class="radio-option sport">
+              <div class="radio-check"></div>
+              <div class="radio-content">
+                <img src="./assets/checkBoxIcons/boxing-glove.svg" alt="">
+                <span>Boxing</span>
+              </div>
+              <input type="radio" name="sport">
+            </div>
+          </div>
+        </div>
+
+        <div class="checkbox-wrapper">
+          <div class="checkbox-input">
+            <div class="checkbox"></div>
+            <input type="checkbox" class="checkboxInput">
+          </div>
+          <label>
+            Declaro que li e concordo com os
+            <span class="highlight">Termos e Condições</span> e com a <span class="highlight">Política de
+              Privacidade</span> da escola Estrela do Amanhã.
+          </label>
+        </div>
+
+        <div class="btn-wrapper">
+          <button>Salvar respostas</button>
+          <button>Fazer matrícula</button>
+        </div>
       </fieldset>
     </form>
   </main>
